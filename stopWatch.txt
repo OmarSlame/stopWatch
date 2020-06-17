@@ -1,0 +1,55 @@
+
+let time =0;
+const timer ={
+    interval1:0,
+
+    startHelper : function(){
+        document.getElementById("t").innerHTML=++time;
+    },
+
+    start : function(){
+  
+
+        this.interval1 = window.setInterval(this.startHelper,1000);
+    },
+
+    stop : function(){
+        window.clearInterval(this.interval1);
+    },
+
+    reset : function(){
+
+        window.clearInterval(this.interval1);
+        time=0;
+        document.getElementById("t").innerHTML=time;
+    },
+    interval : function(){
+        document.getElementById("interval").innerHTML= "interval:" + time;
+    },
+    resume : function(){
+        this.start();
+    }
+    
+
+
+}
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
